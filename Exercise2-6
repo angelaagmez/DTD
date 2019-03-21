@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE countries [
+<!ELEMENT countries (country)*>
+<!ELEMENT country (name, europeanUnion?, nato?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT europeanUnion EMPTY>
+<!ELEMENT nato EMPTY>
+]>
+<countries>
+<country>
+<name>Spain</name>
+<europeanUnion/>
+<nato/>
+</country>
+<country>
+<name>Norweigan</name>
+<nato/>
+</country>
+<country>
+<name>Austria</name>
+<europeanUnion/>
+</country>
+</countries>

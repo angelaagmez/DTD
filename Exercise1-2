@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE letters [
+<!ELEMENT letters (letter+)>
+<!ELEMENT letter (#PCDATA)>
+]>
+<letters>
+<letter>m</letter>
+<letter>e</letter>
+</letters>

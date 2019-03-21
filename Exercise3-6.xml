@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE football [
+<!ELEMENT football ((player | team)*)>
+<!ELEMENT player EMPTY>
+<!ATTLIST player name NMTOKENS #REQUIRED>
+<!ATTLIST player code ID #REQUIRED>
+<!ELEMENT team EMPTY>
+<!ATTLIST team name CDATA #REQUIRED>
+<!ATTLIST team players IDREFS #IMPLIED>
+]>
+
+<football>
+   <player name="Alfredo Di Stefano" code="ads"/>
+   <player name="Edison Arantes do Nascimento" code="ean"/>
+   <player name="Diego Armando Maradona" code="dam"/>
+   <player name="Johan Cruyff" code="jc"/>
+   <team name="Società Sportiva Calcio Napoli" players="ads"/>
+   <team name="Football Clob Barcelona" players="dam"/>
+</football>

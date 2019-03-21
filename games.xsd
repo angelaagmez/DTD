@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          elementFormDefault="qualified">
+
+<xs:simpleType name="minuteType">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive vlue="120"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="gameType">
+    <xs:sequence>
+        <xs:element name="home-team" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ex-team" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="scores" type="scoresType" minOccurs="0"/>
+        <xs:element name="yellows" type="yellowsType" minOccurs="0"/>
+        <xs:element name="reds" type="redsType" minOccurs="0"/>
+    </xs:sequence>
+        <xs:attribute name="score" type="xs:integer" minOccurs="0"/>
+</xs:complexType>
+
+<xs:complexType name="scoresType">
+    <xs:sequence>
+        <xs:element name="score" type="scoreType" minOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="scoreType">
+    <xs:sequence>
+        <xs:element name="player" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+        <xs:attribute name="minute" type="minuteType" minOccurs="1"/>
+</xs:complexType>
+
+<xs:complexType name="yellowsType">
+    <xs:sequence>
+        <xs:element name="player" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="redsType">
+    <xs:sequence>
+        <xs:element name="player" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gamesType">
+    <xs:sequence>
+        <xs:element name="game" type="gameType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="games" type="gamesType"/>
+
+</xs:schema>

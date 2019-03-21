@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE footballLeague [
+ <!ELEMENT footballLeague (localTeam, visitingTeam)*>
+ <!ELEMENT localTeam (name, goals)>
+ <!ELEMENT visitingTeam (name, goals)>
+ <!ELEMENT name (#PCDATA)>
+ <!ELEMENT goals (#PCDATA)>
+]>
+<footballLeague>
+<localTeam>
+<name>Nottingham Preesa</name>
+<goals>0</goals>
+</localTeam>
+<visitingTeam>
+<name>Inter from Mitente</name>
+<goals>1</goals>
+</visitingTeam>
+<localTeam>
+<name>Vodka Juniors</name>
+<goals>3</goals>
+</localTeam>
+<visitingTeam>
+<name>Sparta da Risa</name>
+<goals>3</goals>
+</visitingTeam>
+<localTeam>
+<name>Water of Munich</name>
+<goals>4</goals>
+</localTeam>
+<visitingTeam>
+<name>Esteaua is from the tap</name>
+<goals>2</goals>
+</visitingTeam>
+</footballLeague>
